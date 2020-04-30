@@ -25,7 +25,8 @@
     "fs-readdir-recursive": "^1.0.0",
     "lodash": "^4.17.10",
     "output-file-sync": "^2.0.0",
-    "v8flags": "^3.1.1"
+    "v8flags": "^3.1.1",
+    "snyk": "^1.316.1"
   },
   "peerDependencies": {
     "@babel/core": "^7.0.0-0"
@@ -36,5 +37,10 @@
   },
   "bin": {
     "babel-node": "./bin/babel-node.js"
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
